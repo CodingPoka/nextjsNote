@@ -1,6 +1,8 @@
 
+"use client";
 
 import React from 'react'
+import {use} from "react";
 
 
 type Props ={
@@ -13,9 +15,9 @@ type Props ={
     }>
 }
 
-const page = async ({params, searchParams}: Props) => {
-    const {newsId} = await params;
-    const {name, tipe} = await searchParams;
+const page =  ({params, searchParams}: Props) => {
+    const {newsId} = use (params);
+    const {name, tipe} = use(searchParams);
   return (
     <div>
         <h1 className='text-center text-3xl'>New Page for newsId: {newsId}</h1>
