@@ -1,8 +1,10 @@
+
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-
+import Link from "next/link";
+import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
   title: "Test3 | Root Layout",
@@ -10,23 +12,18 @@ export const metadata: Metadata = {
 };
 
 
-const navigations =[
-  { title : "Home", href:"/"},
-  {title : "About", href:"/about"},
-  {title : "product", href:"/product"},
-  {title : "First Page", href: "/first"}
 
-]
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
       >
-        <div>Component Navbar</div>
+        <Navbar/>
         {children}
         <div>Component Footer</div>
       </body>
