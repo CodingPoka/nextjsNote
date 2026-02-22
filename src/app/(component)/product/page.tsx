@@ -15,7 +15,7 @@ const ProductList = () => {
         <h1 className='text-center text-3xl text-red-500'>Product List</h1>
         <Link href="/product/1" className="block text-center bg-blue-500 text-white px-4 py-2 rounded-md my-2">Product 1</Link>
         <Link href="/product/2" className="block text-center bg-blue-500 text-white px-4 py-2 rounded-md my-2">Product 2</Link>
-        <Link href={`/product/${productId}`} className="block text-center  px-4 py-2 rounded-md my-2">Product 3</Link>
+        <Link href={`/product/${productId}`} className="block text-center bg-blue-500 text-white px-4 py-2 rounded-md my-2">{productId}</Link>
     </div>
   )
 }
